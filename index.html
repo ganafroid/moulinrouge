@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
   <title>Moulin Rouge!</title>
   
@@ -38,179 +38,190 @@
     <div class="preloader_inner">100%</div>
   </div>
   
-  
   <section class="preloader_page cd-section visible">
-      
-     <div onClick="next()">
-      
-       
+    <div onClick="next()">       
       <div class="video_div">
-        <video id="introVideo" class="flex_video" autoplay preload="auto">
+        <video id="introVideo" class="flex_video" preload="auto"  width="100%">
           <source src="video/intro_video.mp4" type='video/mp4'>
           <p>Please use another browser to watch the video</p>
         </video>
-        <div class="top"><h3>Click to skip video</h3>
-</div>
-        </div>
+      <div class="top"><h3>Click to skip video</h3></div>
       </div>
+    </div>
   </section>
     
   <section class="cd-section" id="writing_story">
-    <div class="flex-box">
-      <div class="dt-flex-item-20">
-        <h1>Writing the story</h1><hr>
-        <h3>Drag and drop the blank piece of paper into the typewriter to discover the story...</h3>
+    <div class="flex-box"  style="height:100%;">
+      <div class="dt-flex-item-20" style="padding: 100px 65px;">
+        <h1>Writing the story</h1><br>
+        <h3>Drag and drop the blank piece of paper into the typewriter to watch the story unfold...</h3>
       </div>
 
-        <div class="dt-flex-item-60">
+      <div class="dt-flex-item-60">
         <div id="no-drop" class="draggable drag-drop page-1">
           <h5>Luckily!... an unconscious Argentinean fell through my roof... <br><br>
           He was quickly join by a dwarf dressed as a nun...</h5>
         </div>
 
         <div id="no-drop" class="draggable drag-drop page-2">
-          <h5>
-          On a hill near Paris, was the village of Montmatre. It was not what my father had said but the center of the Bohemian world. Musicians, painters, writers. They were known as the children of the revolution.<br><br>
+          <h5>On a hill near Paris, was the village of Montmatre. It was not what my father had said but the center of the Bohemian world. Musicians, painters, writers. They were known as the children of the revolution.<br><br>
           Yes, I had come to live a penniless existence. I had come to write about truth, beauty, freedom and at which I believed above all things, love. But there was only one problem, I've never been in love!</h5>
         </div>
 
         <div id="yes-drop" class="draggable drag-drop"></div>
 
-<!--
         <div id="no-drop" class="draggable drag-drop page-3">
           <h5>The Moulin Rouge. A night club, a dance hall, and a bordello. Ruled over by Harold Zidler. A kingdom of night time pleasures, where the rich and powerful came to play with the young and beautiful creatures of the underworld.</h5>
         </div>
--->
 
         <div id="outer-dropzone" class="dropzone">
           <img id="inner-dropzone" class="dropzone" src="img/typewriter-large.png" alt="typewriter"
-            srcset="img/typewriter-small.png 250w, img/typewriter-med.png 310w, img/typewriter-large.png 391w"
-            sizes="(max-width:900px) 250px, (max-width: 1367) 310px, (max-width:2000px) 391px">
+          srcset="img/typewriter-small.png 250w, img/typewriter-med.png 310w, img/typewriter-large.png 391w"
+          sizes="(max-width:900px) 250px, (max-width: 1365px) 310px, (max-width:2000px) 391px">
         </div>
       </div>
     </div>
   </section>
 
   <section class="cd-section">  
-         <div onClick="next2()">
-      
-       
+    <div onClick="next2()">
       <div class="video_div">
         <video id="secondVideo" class="flex_video" preload="auto">
           <source src="video/second_video.mp4" type='video/mp4'>
           <p>Please use another browser to watch the video</p>
         </video>
-        <div class="top"><h3>Click to skip video</h3>
-        </div>
-        </div>
+        <div class="top"><h3>Click to skip video</h3></div>
       </div>
-<!--
-
-          <source src="video/second_video.mp4" 
--->
+    </div>
   </section>
 
   <section class="cd-section">
-    <div>
-      <h2>Section 5 - Meet the main characters</h2>
+    <div class="fullwidth">
+      <div class="introtext">
+         
+        <h2 style="color:#8e0c15">Meet The Stars</h2><br>
+        <p style="color:#310604;"> Discover a celebration of love and creative inspiration takes place in the infamous, gaudy and glamorous Parisian nightclub...</p>
+<!--        <h3>Discover the Moulin Rouge Stars by hovering over them</h3><br>-->
+<!--        <p style="color:#310604;">A celebration of love and creative inspiration takes place in the infamous, gaudy and glamorous Parisian nightclub. A young poet, who is plunged into the heady world of Moulin Rouge, begins a passionate affair with the club's most notorious and beautiful star...</p>-->
+      </div>
+      
+      <div class="flex-box">
+        <div class="container">
+          <img src="img/satine.jpg" alt="Satine" class="image">
+            <div class="overlay">
+              <div class="text">Satine is the beautiful and desirable highlight of the Moulin Rouge, where she works as a dancer, and a prostitute.</div>
+            </div>
+        </div>
+      
+        <div class="container">
+          <img src="img/christian.jpg" alt="Christian" class="image">
+            <div class="overlay">
+              <div class="text">Christian is a young English poet/writer, who falls in love with the star of the Moulin Rouge, cabaret actress and courtesan Satine.</div>
+            </div>
+        </div>
+
+        <div class="container">
+          <img src="img/duke.jpg" alt="Duke" class="image">
+            <div class="overlay">
+              <div class="text">The Duke is a rich, pompus man, who uses his money to get what he wants, all the while still being respected.</div>
+            </div>
+        </div>
+      </div>
+
+      <div class="nextpage">
+        <img src="img/nextrd.png" alt="next" onclick="next()">
+      </div>
     </div>
   </section>
 
   <section class="cd-section">
     <div>
       <a id="cross" class="cd-nav-trigger cd-text-replace" href="#primary-nav">Menu<span aria-hidden="true" class="cd-icon"></span></a>
-
         <div class="cd-projects-container">
-            <ul class="cd-projects-previews">
-                <li>
-                    <a href="#0">
-                        <div class="cd-project-title">
-                            <h2>Ballad</h2>
-                        </div>
-                    </a>
-                </li>
+          <ul class="cd-projects-previews">
+              <li>
+                <a href="#0">
+                  <div class="cd-project-title">
+                    <h2>Ballad</h2>
+                  </div>
+                </a>
+              </li>
 
-                <li>
-                    <a href="#0">
-                        <div class="cd-project-title">
-                            <h2>Cabaret</h2>
-                        </div>
-                    </a>
-                </li>
+              <li>
+                <a href="#0">
+                  <div class="cd-project-title">
+                    <h2>Cabaret</h2>
+                  </div>
+                </a>
+              </li>
 
-                <li>
-                    <a href="#0">
-                        <div class="cd-project-title">
-                            <h2>Rehearsals</h2>
-                        </div>
-                    </a>
-                </li>
+              <li>
+                <a href="#0">
+                  <div class="cd-project-title">
+                    <h2>Rehearsals</h2>
+                  </div>
+                </a>
+              </li>
 
-                <li>
-                    <a href="#0">
-                        <div class="cd-project-title">
-                            <h2>Tango</h2>
-                        </div>
-                    </a>
-                </li>
-            </ul> <!-- .cd-projects-previews -->
+              <li>
+                <a href="#0">
+                  <div class="cd-project-title">
+                    <h2>Tango</h2>
+                  </div>
+                </a>
+              </li>
+          </ul>
 
-            <ul class="cd-projects">
-                <li>
-                    <div class="preview-image">
-                        <div class="cd-project-title">
-                          <h2>Ballad</h2>
-                          <br>
-                          <audio id="ballad" controls="controls" style="display:none;" loop>
-                            <source src="music/balad/rufus_wainwright_complainte_de_la_butte.mp3" type="audio/mpeg">
-                            Your browser does not support the audio element.
-                          </audio>
-                          <button id="balButton" class="play"></button>
-                          <br><br>
-                          <p>Complainte de la Butte<br>Rufus Wainwright</p>
-                        </div> 
-                    </div>
+          <ul class="cd-projects">
+            <li>
+              <div class="preview-image">
+                <div class="cd-project-title">
+                  <h2>Ballad</h2>
+                  <br>
+                    <audio id="ballad" controls="controls" style="display:none;" loop>
+                      <source src="music/balad/rufus_wainwright_complainte_de_la_butte.mp3" type="audio/mpeg">
+                      Your browser does not support the audio element.
+                    </audio>
+                  <button id="balButton" class="play"></button>
+                  <br><br>
+                  <p>Complainte de la Butte<br>Rufus Wainwright</p>
+                </div> 
+              </div>
 
-                    <div class="cd-project-info">
-<!--
-                        <h4>Gramophone</h4><br>
-                          <audio id="gramophone" controls="controls" loop style="display:none;">
-                            <source src="music/balad/gramophone.mp3" type="audio/mpeg">
-                            Your browser does not support the audio element.
-                          </audio>
-                          <button id="smButton" class="play" onclick="playAudio()"></button>
--->
-                      <div class="flex-box-horizontal">
-                        <div class=".dt-flex-item-30-hor">  
-                        <h4>Gramophone</h4><br>
-                            <audio id="balGramo" controls="controls" loop style="display:none;">
-                              <source src="music/balad/gramophone.mp3" type="audio/mpeg">
-                              Your browser does not support the audio element.
-                            </audio><br>
-                            <button id="balGramoButton" class="playsm"></button>
-                        </div>
-                        <div class=".dt-flex-item-30-hor">
+              <div class="cd-project-info">
+                <div style="width: 100%;height:auto;text-align:center;padding:10px 0 20px 0;">
+                <h3>Select an ambient noise to create a different atmosphere</h3><br></div>
+            
+                <div class="flex-box-horizontal">
+                  <div class=".dt-flex-item-30-hor">  
+                    <h4>Gramophone</h4><br>
+                    <audio id="balGramo" controls="controls" loop style="display:none;">
+                      <source src="music/balad/gramophone.mp3" type="audio/mpeg">
+                      Your browser does not support the audio element.
+                    </audio><br>
+                      <button id="balGramoButton" class="playsm"></button>
+                  </div>
+                      <div class=".dt-flex-item-30-hor">
                         <h4>Typewriter</h4><br>
-                          <audio id="typewriter" controls="controls" loop style="display:none;">
-                            <source src="music/balad/typewriting.mp3" type="audio/mpeg">
+                        <audio id="typewriter" controls="controls" loop style="display:none;">
+                          <source src="music/balad/typewriting.mp3" type="audio/mpeg">
+                          Your browser does not support the audio element.
+                        </audio><br>
+                        <button id="balTypeButton" class="playsm"></button>
+                      </div>
+                      <div class=".dt-flex-item-30-hor">  
+                        <h4>Chatter</h4><br>
+                          <audio id="balChatter" controls="controls" loop style="display:none;">
+                            <source src="music/balad/chatter.mp3" type="audio/mpeg">
                             Your browser does not support the audio element.
                           </audio><br>
-                          <button id="balTypeButton" class="playsm"></button>
-
-                        </div>
-                        <div class=".dt-flex-item-30-hor">  
-                        <h4>Chatter</h4><br>
-                            <audio id="balChatter" controls="controls" loop style="display:none;">
-                              <source src="music/balad/chatter.mp3" type="audio/mpeg">
-                              Your browser does not support the audio element.
-                            </audio><br>
                           <button id="balChatterButton" class="playsm"></button>
-                        </div>
-                      </div> 
-                    </div> <!-- .cd-project-info -->
-                </li>
+                      </div>
+                  </div> 
+                </div> <!-- .cd-project-info -->
+              </li>
 
-                <li>
+              <li>
                     <div class="preview-image">
                         <div class="cd-project-title">
                           <h2>Cabaret</h2>
@@ -226,6 +237,8 @@
                   </div>
                           
                     <div class="cd-project-info">
+                      <div style="width: 100%;height:auto;text-align:center;padding:10px 0 20px 0;">
+                      <h3>Select an ambient noise to create a different atmosphere</h3><br></div>
                        <div class="flex-box-horizontal">
                         <div class=".dt-flex-item-30-hor">  
                         <h4>Cheering</h4><br>
@@ -271,6 +284,8 @@
                         </div> 
 
                     <div class="cd-project-info">
+                      <div style="width: 100%;height:auto;text-align:center;padding:10px 0 20px 0;">
+                <h3>Select an ambient noise to create a different atmosphere</h3><br></div>
                       <div class="flex-box-horizontal">
                         <div class=".dt-flex-item-30-hor">  
                         <h4>Beat</h4><br>
@@ -311,22 +326,25 @@
                                 <source src="music/tango/moulin_rouge_el_tango_de_roxanne.mp3" type="audio/mpeg" >
                                 Your browser does not support the audio element.
                               </audio>
-                              <button id="tangoButton" class="play" onclick="stopOther"></button>
+                              <button id="tangoButton" class="play" onclick="stopOther()"></button>
                               <br><br>
                               <p>El Tango de Roxanne<br>Ewan McGregor &amp; José Feliciano</p>
                           </div>
                         </div> 
 
                     <div class="cd-project-info">
+                      <div style="width: 100%;height:auto;text-align:center;padding:10px 0 20px 0;">
+                      <h3>Choose between the instrumental and lyrical version of the Tango</h3><br></div>
                       <div class="flex-box-horizontal">
                         <div class=".dt-flex-item-30-hor">  
-                        <h4>Listen to the instrumental version instead</h4><br>
+                        <h4>Instrumental Tango</h4><br>
                             <audio id="instrumental" controls="controls" loop style="display:none;">
                               <source src="music/tango/instrumental_el_tango_de_roxanne.mp3" type="audio/mpeg">
                               Your browser does not support the audio element.
                             </audio><br>
-                            <button id="instrumentalButton" class="playsm" onclick="stopOther"></button>
+                            <button id="instrumentalButton" class="playsm" onclick="stopOther()"></button>
                         </div>
+<!--
                         <div class=".dt-flex-item-30-hor">  
                         <h4>Dancing</h4><br>
                             <audio id="instruDancing" controls="controls" loop style="display:none;">
@@ -343,6 +361,7 @@
                           </audio><br>
                           <button id="instruCheeringButton" class="playsm"></button>
                         </div>
+-->
                       </div> 
                 
                   </div>
@@ -351,26 +370,47 @@
             </ul> <!-- .cd-projects -->
 
             <button class="scroll cd-text-replace">Scroll</button>
-        </div> <!-- .cd-project-container -->
-
-<!--
-        <nav class="cd-primary-nav" id="primary-nav">
-            <ul>
-                <li class="cd-label">Navigation</li>
-                <li><a href="#0">The Ballad</a></li>
-                <li><a href="#0">The Cabaret</a></li>
-                <li><a href="#0">The Rehearsals</a></li>
-                <li><a href="#0">The Tango</a></li>
-            </ul>
-        </nav>  .cd-primary-nav 
--->
+      <div class="previouspage">
+        <img src="img/back.png" alt="next" onclick="previous()">
+      </div>       
+      <div class="nextpage">
+        <img src="img/next.png" alt="next" onclick="next()">
       </div>
+    </div>
+        </div> <!-- .cd-project-container -->
   </section>
     
     <section class="cd-section">
-    <div>
-      <h2>Section 7 - final page</h2>
-    </div>
+    <div class="fullwidth">
+      <div class="half">
+        <img src="img/dvd_large.png" alt="dvd"
+            srcset="img/dvd_small.png 185w, img/dvd_med.png 340w, img/dvd_large.png 443w"
+            sizes="(max-width:900px) 185px, (max-width: 1367px) 340px, (max-width:2000px) 443px">
+      </div>
+      
+    
+      <div class="half">
+        <div style="width:60%;height:50%;margin: 0 auto;">
+        <h2 style="color:#8e0c15">Freedom, Beauty, Truth and Love at the Moulin Rouge!</h2><br><br>
+         <p style="color:#310604;">Join Christian, the young English writer, who has come to Paris to follow the Bohemian revolution taking hold of the city's drug and prostitute infested underworld...<br><br>
+          Nowhere is the thrill of the underworld more alive than at the Moulin Rouge, a night club where the rich and poor men alike come to be entertained by the dancers...<br><br>
+          You might find love in the most unexpected places..</p><br><br>
+        <button class="share">Share on Facebook</button>
+        <button class="buy">Buy the DVD</button>
+        </div>
+      </div>
+      
+      <div class="clearfix"></div>
+      
+      <div class="footer">
+        <div>
+        <p>Moulin Rouge! &copy; Twentieth Century Fox Film Corporation 2017</p></div>
+      </div>
+
+    <div class="previouspage">
+      <img src="img/backrd.png" alt="next" onclick="previous()">
+      </div>
+    </div>   
   </section>
  
   
@@ -381,11 +421,7 @@
     </ul>
   </nav>  <!-- .cd-vertical-nav -->
  
-  
-  
-  <!-- VideosJS -->
-<!--  <script src="http://vjs.zencdn.net/6.2.5/video.js"></script>-->
-  <!-- VideosJS -->
+
   
   <!-- Page scrolls jQuery -->
   <script src="plugins/page-scrolls/js/jquery-2.1.4.js"></script>

@@ -10,7 +10,10 @@ jQuery(document).ready(function($){
 		transitionsNotSupported = ( $('.no-csstransitions').length > 0),
         audioQuit = $('#pButton'),
         music = $('#music'),
-        cross = $('#cross');
+        cross = $('#cross'),
+        nextpage = $('.nextpage'),
+        previouspage = $('.previouspage');
+        
 
 	var animating = false,
 		//will be used to extract random numbers for projects slide up/slide down effect
@@ -25,11 +28,15 @@ jQuery(document).ready(function($){
 			navigationTrigger.add(projectsContainer).addClass('project-open');
 			openProject($(this).parent('li'));
             cross.show();
+            nextpage.hide();
+            previouspage.hide();
 //            navigation.show();
 		}
 	});
 
     cross.hide();
+    nextpage.show();
+    previouspage.show();
   
 	navigationTrigger.on('click', function(event){
       event.preventDefault();	
@@ -66,6 +73,8 @@ jQuery(document).ready(function($){
 				closeProject();
                 music.trigger(stopAudio());
                 cross.hide();
+                nextpage.show();
+                previouspage.show();
 //                music.hasClass('play').audioQuit.trigger(playAudio());
             }
 //			} else if( navigationTrigger.hasClass('nav-visible') ) {

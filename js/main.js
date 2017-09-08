@@ -1,8 +1,12 @@
+//do not allow wheelscroll
+window.onwheel = function(){ return false; }
+
 /* ---------- LOADER ---------- */
 loader();
 
 function loader(_success) {
     var obj = document.querySelector('.preloader'),
+    vid = document.getElementById('introVideo'),
     inner = document.querySelector('.preloader_inner'),
     page = document.querySelector('.preloader_page');
     obj.classList.add('preloader_show');
@@ -13,11 +17,13 @@ function loader(_success) {
             inner.textContent = w+'%';
             if (w === 100){
                 obj.classList.remove('preloader_show');
+                vid.play();
                 page.classList.add('preloader_show');
                 clearInterval(t);
                 w = 0;
                 if (_success){
                     return _success();
+                    
                 }
             }
         }, 20);
@@ -26,24 +32,29 @@ function loader(_success) {
 
 
 /* ---------- INTRO VIDEO ---------- */
+function previous() {
+  let previousBtn = document.getElementById('previousBtn');
+  //go to next section on click
+  previousBtn.click();
+}
+
 function next() {
   let nextBtn = document.getElementById('nextBtn');
   let vid = document.getElementById('introVideo');  
-    
+  //go to next section on click + pause video 
   nextBtn.click();
   vid.pause();
   }
 
 document.getElementById('introVideo').addEventListener('ended',function(){
   let nextBtn = document.getElementById('nextBtn');
-  
+  //go to next section on click
   nextBtn.click();
   }, false);
 /* ---------- END OF INTRO VIDEO ---------- */
 
 
 /* ---------- DRAG AND DROP ---------- */
-
 interact('.draggable')
   .draggable({
     // enable inertial throwing
@@ -84,7 +95,7 @@ interact('.draggable')
 interact('.dropzone').dropzone({
   // only accept elements matching this CSS selector
   accept: '#yes-drop',
-  overlap: 0.5,
+  overlap: 0.2,
 
   // listen for drop related events:
 
@@ -99,13 +110,11 @@ interact('.dropzone').dropzone({
     // feedback the possibility of a drop
     dropzoneElement.classList.add('drop-target');
     draggableElement.classList.add('can-drop');
-//    draggableElement.textContent = 'Dragged in';
   },
   ondragleave: function (event) {
     // remove the drop feedback style
     event.target.classList.remove('drop-target');
     event.relatedTarget.classList.remove('can-drop');
-//    event.relatedTarget.textContent = 'Dragged out';
   },
   ondrop: function (event) {
     let nextBtn = document.getElementById('nextBtn');
@@ -127,44 +136,22 @@ interact('.dropzone').dropzone({
 function next2() {
   let nextBtn = document.getElementById('nextBtn');
   let video = document.getElementById('secondVideo');
-     
+  //go to next section on click + pause video 
   nextBtn.click();
   video.pause();
   }
 
 document.getElementById('secondVideo').addEventListener('ended',function(){
   let nextBtn = document.getElementById('nextBtn');
-  
+  //go to next section on click
   nextBtn.click();
   }, false);
 
 /* ---------- END OF SECOND VIDEO ---------- */
 
+/* -------- AUDIO SECTION ---------- */
 
-
-//MUSIC
-
-//var music = document.getElementById('music');
-//var pButton = document.getElementById('pButton');
-//
-//function playAudio() {
-//	if (music.paused) {
-//		music.play();
-//		pButton.className = "";
-//		pButton.className = "pause";
-//	} else {
-//		music.pause();
-//        music.currentTime = 0;
-//		pButton.className = "";
-//		pButton.className = "play";
-//	}
-//}
-
-
-
-
-
-
+//Change play/pause button
 function playAudio() {
   var ballad = document.getElementById('ballad');
   var balButton = document.getElementById('balButton');
@@ -431,47 +418,50 @@ function playAudio() {
 		instrumentalButton.className = "playsm";
 	}
   });
-  
-  var instruDancing = document.getElementById('instruDancing');
-  var instruDancingButton = document.getElementById('instruDancingButton');
-  
-  instruDancingButton.addEventListener('click', function(event) {
-    
-    event.preventDefault();
-    
-    if (instruDancing.paused) {
-		instruDancing.play();
-		instruDancingButton.className = "";
-		instruDancingButton.className = "pausesm";
-	} else {
-		instruDancing.pause();
-        instruDancing.currentTime = 0;
-		instruDancingButton.className = "";
-		instruDancingButton.className = "playsm";
-	}
-  });  
-  
-  var instruCheering = document.getElementById('instruCheering');
-  var instruCheeringButton = document.getElementById('instruCheeringButton');
-  
-  instruCheeringButton.addEventListener('click', function(event) {
-    
-    event.preventDefault();
-    
-    if (instruCheering.paused) {
-		instruCheering.play();
-		instruCheeringButton.className = "";
-		instruCheeringButton.className = "pausesm";
-	} else {
-		instruCheering.pause();
-        instruCheering.currentTime = 0;
-		instruCheeringButton.className = "";
-		instruCheeringButton.className = "playsm";
-	}
-  });  
+
+//  THIS HAS BEEN REMOVED DUE TO NOT GIVING VALUE TO THE PLAYER
+//  var instruDancing = document.getElementById('instruDancing');
+//  var instruDancingButton = document.getElementById('instruDancingButton');
+//  
+//  instruDancingButton.addEventListener('click', function(event) {
+//    
+//    event.preventDefault();
+//    
+//    if (instruDancing.paused) {
+//		instruDancing.play();
+//		instruDancingButton.className = "";
+//		instruDancingButton.className = "pausesm";
+//	} else {
+//		instruDancing.pause();
+//        instruDancing.currentTime = 0;
+//		instruDancingButton.className = "";
+//		instruDancingButton.className = "playsm";
+//	}
+//  });  
+//  
+//  var instruCheering = document.getElementById('instruCheering');
+//  var instruCheeringButton = document.getElementById('instruCheeringButton');
+//  
+//  instruCheeringButton.addEventListener('click', function(event) {
+//    
+//    event.preventDefault();
+//    
+//    if (instruCheering.paused) {
+//		instruCheering.play();
+//		instruCheeringButton.className = "";
+//		instruCheeringButton.className = "pausesm";
+//	} else {
+//		instruCheering.pause();
+//        instruCheering.currentTime = 0;
+//		instruCheeringButton.className = "";
+//		instruCheeringButton.className = "playsm";
+//	}
+//  });  
   
 }
 
+
+//Stop the audio when clicking the cross which closes page
 function stopAudio() {
   var ballad = document.getElementById('ballad');
   var balButton = document.getElementById('balButton');
@@ -515,11 +505,11 @@ function stopAudio() {
   var instrumental = document.getElementById('instrumental');
   var instrumentalButton = document.getElementById('instrumentalButton');
   
-  var instruDancing = document.getElementById('instruDancing');
-  var instruDancingButton = document.getElementById('instruDancingButton');
-  
-  var instruCheering = document.getElementById('instruCheering');
-  var instruCheeringButton = document.getElementById('instruCheeringButton');
+//  var instruDancing = document.getElementById('instruDancing');
+//  var instruDancingButton = document.getElementById('instruDancingButton');
+//  
+//  var instruCheering = document.getElementById('instruCheering');
+//  var instruCheeringButton = document.getElementById('instruCheeringButton');
   
   if (ballad.play){
     ballad.pause();
@@ -613,24 +603,24 @@ function stopAudio() {
 	instrumentalButton.className = "playsm";
   };
   
-  if (instruDancing.play){
-    instruDancing.pause();
-    instruDancing.currentTime = 0;
-	instruDancingButton.className = "";
-	instruDancingButton.className = "playsm";
-  };
-  
-  if (instruCheering.play){
-    instruCheering.pause();
-    instruCheering.currentTime = 0;
-	instruCheeringButton.className = "";
-	instruCheeringButton.className = "playsm";
-  };  
+//  if (instruDancing.play){
+//    instruDancing.pause();
+//    instruDancing.currentTime = 0;
+//	instruDancingButton.className = "";
+//	instruDancingButton.className = "playsm";
+//  };
+//  
+//  if (instruCheering.play){
+//    instruCheering.pause();
+//    instruCheering.currentTime = 0;
+//	instruCheeringButton.className = "";
+//	instruCheeringButton.className = "playsm";
+//  };  
 }
 
 
+// stop tango songs from playing at the same time
 function stopOther(){
-//  event.preventDefault();
   
   var tango = document.getElementById('tango');
   var tangoButton = document.getElementById('tangoButton');
@@ -638,25 +628,25 @@ function stopOther(){
   var instrumental = document.getElementById('instrumental');
   var instrumentalButton = document.getElementById('instrumentalButton');
   
-  
+  if (instrumental.play){
+    tango.pause();
+    tango.currentTime = 0;
+	tangoButton.className = "";
+	tangoButton.className = "play";
+  };
    if (tango.play){
     instrumental.pause();
     instrumental.currentTime = 0;
 	instrumentalButton.className = "";
 	instrumentalButton.className = "playsm";
   };
-//  if (instrumental.play){
-//    tango.pause();
-//    tango.currentTime = 0;
-//	tangoButton.className = "";
-//	tangoButton.className = "play";
-//  };
 }
+
 //MUSIC
 stopOther();
 playAudio();
 
-//SOUND
+//SOUND - setting the volume
   var ballad = document.getElementById('ballad');
   var balGramo = document.getElementById('balGramo');
   var typewriter = document.getElementById('typewriter');  
@@ -671,8 +661,8 @@ playAudio();
   var rehearDancing = document.getElementById('rehearDancing');
   var tango = document.getElementById('tango');
   var instrumental = document.getElementById('instrumental');
-  var instruDancing = document.getElementById('instruDancing');
-  var instruCheering = document.getElementById('instruCheering');
+//  var instruDancing = document.getElementById('instruDancing');
+//  var instruCheering = document.getElementById('instruCheering');
 
 ballad.volume = 1;
 balGramo.volume = 0.3;
@@ -688,5 +678,5 @@ rehearClap.volume = 0.1;
 rehearDancing.volume = 1;
 tango.volume = 0.9;
 instrumental.volume = 0.9;
-instruDancing.volume = 0.9;
-instruCheering.volume = 0.6;
+//instruDancing.volume = 0.9;
+//instruCheering.volume = 0.6;
