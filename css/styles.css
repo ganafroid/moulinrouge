@@ -1,0 +1,312 @@
+/* ---------- GENERAL ---------- */
+
+h1 {
+  font-family: 'rye', 'Special Elite', 'Libre Baskerville', serif;
+  font-size: 36px;
+  line-height: 46px;
+  letter-spacing: 3px;
+}
+
+h2 {
+  font-family: 'Special Elite', 'Libre Baskerville', serif;
+  font-size: 30px;
+  line-height: 40px;
+  letter-spacing: 3px;
+}
+
+h3 {
+  font-family: 'Special Elite', 'Libre Baskerville', serif;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 1px;
+}
+
+h5 {
+  font-family:'Special Elite', 'Libre Baskerville', serif;
+  font-size:7px;
+  line-height:8px;  
+}
+
+p {
+  font-family: 'Libre Baskerville', 'times',  serif;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  font-style: italic;
+}
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.flex-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-height: 100%;
+  max-width: 100%;
+  margin: auto;
+}
+
+.flex-box-horizontal {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+/* ---------- GENERAL ---------- */
+
+
+
+
+
+
+/* ---------- DESKTOP FLEX ITEM SIZES ---------- */
+
+.dt-flex-item-60 {
+  width: 60%;  /* Or whatever */
+  max-height: 90%;
+  margin: auto;  /* Magic! */
+}
+
+.dt-flex-item-20 {
+  width: 20%;  /* Or whatever */
+  max-height: 90%;
+  margin: auto;  /* Magic! */
+}
+
+.dt-flex-item-30-hor {
+  width: 30%;
+  flex-direction: row;
+  text-align: center;
+  margin: auto;
+}
+
+
+/* ---------- DESKTOP FLEX ITEM SIZES ---------- */
+
+
+
+
+
+
+/* ---------- LOADER ---------- */
+
+.preloader{
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  margin:auto;
+  width:100vw;
+  height:100vh;
+  background-image: url("../img/vintage-concrete.png");
+  visibility:hidden;
+  opacity:0;
+  transition:all 0.5s ease;
+  z-index:99999999999999;
+}
+.preloader_inner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 4em;
+  height: 4em;
+  line-height: 4em;
+  text-align: center;
+  font-size: 4.5em;
+  font-family: monospace;
+  font-weight: 300;
+  color: #580608;
+}
+
+.preloader_page{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 4em;
+  line-height: 1em;
+  text-align: center;
+  font-size: 1em;
+  font-family: monospace;
+  font-weight: 300;
+  visibility:hidden;
+  opacity:0;
+  transition:all 0.5s ease;
+}
+
+.preloader_show{
+  visibility:visible !important;
+  opacity:1 !important;
+  transition:all 0.5s ease;
+}
+
+.preloader img {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  z-index: 1;
+  margin: -100px 0 0 -100px;
+}
+
+/* ---------- END OF LOADER ---------- */
+
+
+
+/*VIDEO*/
+.video_div {
+  text-align: center;
+  display: flex;
+  position:relative;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+}
+
+.flex_video {
+  width: 50%;
+  max-height: 50%;
+  margin: auto;
+  position:relative;
+  z-index:-10;
+}
+
+.top {
+  position:absolute;
+  width: 100%;  
+  margin: auto;
+  bottom:50px;
+  text-align: center;
+  z-index:1;
+  cursor: pointer;
+}
+
+/* ---------- DRAG AND DROP ---------- */
+#outer-dropzone {
+  max-height: 70%;
+  width: 52%;
+  bottom: 0;
+}
+
+#inner-dropzone {
+  z-index: 1;
+}
+
+#no-drop {
+  width:220px;
+  padding:20px;
+  height:300px;
+  box-shadow: 2px 2px 2px #000;
+}
+
+#yes-drop {
+  width:220px;
+  padding:20px;
+  height:300px;
+  box-shadow: 2px 2px 2px #000;
+  
+}
+
+.drag-drop {
+  display: inline-block;
+  min-width: 40px;
+  padding: 1em 0.5em;
+  color: #000;
+  background-color: #fff;
+
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+
+  transition: background-color 0.3s;
+}
+
+.drag-drop.can-drop {
+  color: #000;
+  background-color: #936a6a;
+}
+
+.dropzone {
+  margin: auto;
+}
+
+.dropzone img {
+/*  position:absolute;*/
+  position:relative;
+  bottom:20px;
+  z-index:1;
+  margin:auto;
+}
+
+.page-1 {
+    -ms-transform: rotate(17deg); /* IE 9 */
+    -webkit-transform: rotate(17deg); /* Safari */
+    transform: rotate(17deg);
+}
+
+.page-2 {
+    -ms-transform: rotate(-12deg); /* IE 9 */
+    -webkit-transform: rotate(-12deg); /* Safari */
+    transform: rotate(-12deg);
+}
+
+.page-3 {
+    -ms-transform: rotate(9deg); /* IE 9 */
+    -webkit-transform: rotate(9deg); /* Safari */
+    transform: rotate(9deg);
+}
+/* ---------- END OF DRAG AND DROP ---------- */
+
+
+
+/*SOUND*/
+#balButton, #cabButton, #rehearButton, #tangoButton {
+  height: 80px;
+  width: 80px;
+  border: none;
+  background-size: 100% 100%;
+  background-position: center;
+  cursor: pointer;
+  
+}
+
+* :focus {
+  outline: none;
+}
+
+.play {
+  background: url('../img/play.png') no-repeat;
+}
+
+.pause {
+  background: url('../img/pause.png') no-repeat;
+}
+
+
+#balGramoButton, #balTypeButton, #balChatterButton, #cabCheeringButton, #cabDancingButton, #cabChatterButton, #rehearBeatButton, #rehearClapButton, #rehearDancingButton, #instrumentalButton, #instruDancingButton, #instruCheeringButton {
+  height: 60px;
+  width: 60px;
+  border: none;
+  background-size: 90% 90%;
+  background-position: center;
+  cursor: pointer;
+}
+
+.playsm {
+  background: url('../img/playsm.png') no-repeat;
+}
+
+.pausesm {
+  background: url('../img/pausesm.png') no-repeat;
+}
+/*SOUND*/
